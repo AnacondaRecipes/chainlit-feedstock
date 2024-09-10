@@ -1,0 +1,70 @@
+{% set name = "chainlit" %}
+{% set version = "1.1.404" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/chainlit-{{ version }}.tar.gz
+  sha256: 7d74fa9ae260193a918c29cd28dcdbae4583a5ccf95642a292efc3c04f1dcfcf
+
+build:
+  entry_points:
+    - chainlit = chainlit.cli:cli
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
+
+requirements:
+  host:
+    - python >=3.9,<4.0
+    - poetry-core
+    - pip
+  run:
+    - python >=3.9,<4.0.0
+    - httpx 
+    - literalai 
+    - dataclasses-json 
+    - fastapi 
+    - starlette 
+    - uvicorn 
+    - python-socketio 
+    - aiofiles 
+    - syncer 
+    - asyncer
+    - nest-asyncio 
+    - click 
+    - tomli
+    - pydantic 
+    - python-dotenv 
+    - uptrace 
+    - watchfiles 
+    - filetype 
+    - lazify 
+    - packaging 
+    - python-multipart 
+    - pyjwt 
+    - numpy 
+
+test:
+  imports:
+    - chainlit
+  commands:
+    - pip check
+    - chainlit --help
+  requires:
+    - pip
+
+about:
+  home: https://github.com/Chainlit/chainlit
+  summary: Build Conversational AI.
+  license: Apache-2.0
+  license_file: LICENSE
+
+extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/49522
+    reason: Client request
+  recipe-maintainers:
+    - ianaobi
