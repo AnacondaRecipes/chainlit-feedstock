@@ -1,5 +1,5 @@
 {% set name = "chainlit" %}
-{% set version = "1.1.404" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/chainlit-{{ version }}.tar.gz
-  sha256: 7d74fa9ae260193a918c29cd28dcdbae4583a5ccf95642a292efc3c04f1dcfcf
+  sha256: 3467b6e1740cb7a437e020496b07a7f433c777d7c8a241c5f45d981e29458f17
 
 build:
   entry_points:
@@ -33,7 +33,7 @@ requirements:
     - python-socketio 
     - aiofiles 
     - syncer 
-    - asyncer
+    - asyncer 
     - nest-asyncio 
     - click 
     - tomli
@@ -71,4 +71,3 @@ extra:
     reason: Client request
   recipe-maintainers:
     - ianaobi
-    - bkreider
