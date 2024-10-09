@@ -46,7 +46,7 @@ requirements:
     - packaging 
     - python-multipart 
     - pyjwt 
-    - numpy 
+    - numpy <2.0,>=1.26
 
 test:
   imports:
