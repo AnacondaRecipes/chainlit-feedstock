@@ -33,7 +33,7 @@ requirements:
     - python-socketio <6.0.0,>=5.11.0
     - aiofiles <24.0.0,>=23.1.0
     - syncer 
-#    - asyncer ==0.0.7
+    - asyncer ==0.0.7
     - nest-asyncio 
     - click 
     - tomli
