@@ -1,5 +1,5 @@
 {% set name = "chainlit" %}
-{% set version = "1.1.404" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/chainlit-{{ version }}.tar.gz
-  sha256: 7d74fa9ae260193a918c29cd28dcdbae4583a5ccf95642a292efc3c04f1dcfcf
+  sha256: 3467b6e1740cb7a437e020496b07a7f433c777d7c8a241c5f45d981e29458f17
 
 build:
   entry_points:
@@ -21,31 +21,32 @@ requirements:
     - python >=3.9,<4.0
     - poetry-core
     - pip
+    - wheel
   run:
     - python >=3.9,<4.0.0
     - httpx 
-    - literalai 
-    - dataclasses-json 
+    - literalai ==0.0.607
+    - dataclasses-json <0.7.0,>=0.6.7
     - fastapi 
-    - starlette 
-    - uvicorn 
-    - python-socketio 
-    - aiofiles 
+    - starlette <0.38.0,>=0.37.2
+    - uvicorn <0.26.0,>=0.25.0
+    - python-socketio <6.0.0,>=5.11.0
+    - aiofiles <24.0.0,>=23.1.0
     - syncer 
-    - asyncer
-    - nest-asyncio 
+    - asyncer ==0.0.7
+    - nest-asyncio ==1.6.0
     - click 
     - tomli
     - pydantic 
-    - python-dotenv 
+    - python-dotenv ==1.0.1 
     - uptrace 
-    - watchfiles 
+    - watchfiles ==0.20.0
     - filetype 
     - lazify 
-    - packaging 
-    - python-multipart 
+    - packaging <24.0,>=23.1
+    - python-multipart ==0.0.9
     - pyjwt 
-    - numpy 
+    - numpy <2.0,>=1.26
 
 test:
   imports:
@@ -61,6 +62,8 @@ about:
   summary: Build Conversational AI.
   license: Apache-2.0
   license_file: LICENSE
+  dev_url: https://github.com/Chainlit/chainlit
+  doc_url: https://github.com/Chainlit/chainlit/blob/main/README.md
 
 extra:
   anaconda-services:
