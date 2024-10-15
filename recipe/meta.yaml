@@ -49,8 +49,8 @@ requirements:
     - numpy <2.0,>=1.26
 
 test:
-  imports:
-    - chainlit
+#  imports:
+#    - chainlit
   commands:
     - pip check
     - chainlit --help
