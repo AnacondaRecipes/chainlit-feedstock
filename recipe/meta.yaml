@@ -25,7 +25,7 @@ requirements:
   run:
     - python >=3.9,<4.0.0
     - httpx 
-    - literalai 
+    - literalai ==0.0.607
     - dataclasses-json <0.7.0,>=0.6.7
     - fastapi 
     - starlette <0.38.0,>=0.37.2
