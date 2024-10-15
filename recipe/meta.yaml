@@ -40,7 +40,7 @@ requirements:
     - pydantic 
     - python-dotenv ==1.0.1 
     - uptrace 
-    - watchfiles <0.21.0,>=0.20.0
+    - watchfiles ==0.20.0
     - filetype 
     - lazify 
     - packaging <24.0,>=23.1
