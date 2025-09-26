@@ -63,9 +63,45 @@ requirements:
     - azure-storage-blob >=12.24.0,<13.0.0
     - google-cloud-storage >=2.19.0,<3.0.0
 
+# Tests are disabled, needs an authorization token.
 test:
   imports:
     - chainlit
+    - chainlit.action
+    - chainlit.auth
+    - chainlit.auth.cookie
+    - chainlit.cache
+    - chainlit.chat_context
+    - chainlit.chat_settings
+    - chainlit.cli
+    - chainlit.config
+    - chainlit.context
+    - chainlit.data
+    - chainlit.data.acl
+    - chainlit.data.base
+    - chainlit.data.storage_clients.base
+    - chainlit.data.utils
+    - chainlit.element
+    - chainlit.emitter
+    - chainlit.input_widget
+    - chainlit.logger
+    - chainlit.markdown
+    - chainlit.mcp
+    - chainlit.message
+    - chainlit.oauth_providers
+    - chainlit.secret
+    - chainlit.server
+    - chainlit.session
+    - chainlit.sidebar
+    - chainlit.socket
+    - chainlit.step
+    - chainlit.sync
+    - chainlit.translations
+    - chainlit.types
+    - chainlit.user
+    - chainlit.user_session
+    - chainlit.utils
+    - chainlit.version
   commands:
     - pip check
     - chainlit --help
@@ -73,7 +109,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/Chainlit/chainlit
+  home: https://chainlit.io
   summary: Build Conversational AI.
   license: Apache-2.0
   license_family: Apache
