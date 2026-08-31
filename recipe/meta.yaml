@@ -110,10 +110,10 @@ test:
 about:
   home: https://chainlit.io
   summary: Build Conversational AI.
+  description: Chainlit is an open-source Python package to build production ready Conversational AI.
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  description: Chainlit is an open-source Python package to build production ready Conversational AI.
   dev_url: https://github.com/Chainlit/chainlit
   doc_url: https://docs.chainlit.io/get-started/overview
 
