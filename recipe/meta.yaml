@@ -102,9 +102,7 @@ test:
     - chainlit.utils
     - chainlit.version
   commands:
-    # pip check currently removed due to hitting the same issue as:
-    # https://github.com/AnacondaRecipes/opentelemetry-instrumentation-pinecone-feedstock/blob/b13949e1e93acc79c1426e2310e3a6ee6d628779/recipe/meta.yaml#L26
-    #- pip check
+    - pip check
     - chainlit --help
   requires:
     - pip
