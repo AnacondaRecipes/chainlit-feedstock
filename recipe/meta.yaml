@@ -1,5 +1,5 @@
 {% set name = "chainlit" %}
-{% set version = "2.8.0" %}
+{% set version = "2.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2a22f1ad24afd2625a70a18292991138428a9d9a2bc8b0509dc1e9eb96c663d0
+  sha256: 53ca71c66fd98d417039ca5fa9c68349eb8eda771b7e0235a7da531f610fe5d0
 
 build:
   number: 0
