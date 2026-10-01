@@ -103,10 +103,10 @@ test:
     - chainlit.version
   commands:
     - pip check
+    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
     - chainlit --help
   requires:
     - pip
-    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
 
 about:
   home: https://chainlit.io
