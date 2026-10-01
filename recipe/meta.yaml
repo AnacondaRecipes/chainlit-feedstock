@@ -14,7 +14,8 @@ build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - chainlit = chainlit.cli:cli
-  skip: true  # [py<310]
+  # py314 is not currently supported by the project
+  skip: true  # [py<310 or py>=314]
 
 requirements:
   host:
